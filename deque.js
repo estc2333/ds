@@ -50,5 +50,5 @@ console.log(myDeque) // Deque { count: 1, lowestCount: 0, items: { '0': 6 } }
 myDeque.addBack(7)
 console.log(myDeque) // Deque { count: 2, lowestCount: 0, items: { '0': 6, '1': 7 } }
 myDeque.addFront(5)
-console.log(myDeque) 
+console.log(myDeque) // Deque { count: 3, lowestCount: 0, items: { '0': 5, '1': 6, '2': 7 } }
 
