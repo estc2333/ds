@@ -43,7 +43,7 @@ numbers.unshift(-1)     // 返回长度
 
 >**二维数组**
 
-可以用嵌套的for循环进行遍历
+可以用嵌套的for循环进行遍历 
 ```
 function printMatrix(myMatrix) {
       for (let i = 0; i < myMatrix.length; i++) {
@@ -53,3 +53,5 @@ function printMatrix(myMatrix) {
       }
     }
 ```
+
+也可以拍平，然后map或者for of遍历

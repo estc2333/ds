@@ -29,12 +29,12 @@ class Deque {
             this.items[this.lowestCount] = element
         } else { // 队列不为空，且没有元素从被前端删除，此时lowestCount = 0
             for (let i = this.count; i > 0; i--) {
-                this.items[i] = this.items[i - 1]  // 需要将所有元素 后移一位，来空出第一个位置(把原本元素this.items[i] 重新赋值为它的前一位的值，因此是元素后移)
+                this.items[i] = this.items[i - 1]  // ？需要将所有元素 后移一位，来空出第一个位置(把原本元素this.items[i] 重新赋值为它的前一位的值，因此是元素后移)
               }
               this.count++
               this.lowestCount = 0
-              // 由于我们不想丢失任何已有的值，需要从最后一位开始迭代所有的值，并为元素赋上索引值减 1 位置的值。在所有的元素
-              // 都完成移动后，第一位将是空闲状态，这样就可以用需要添加的新元素来覆盖它了
+              // 不能丢失已有的值，需要从最后一位开始迭代所有的值，并为元素赋上索引值减 1 位置的值
+              // 在所有的元素都完成移动后，第一位将是空闲状态，这样就可以用需要添加的新元素来覆盖它了
               this.items[0] = element 
         }
     }
